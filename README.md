@@ -49,11 +49,11 @@ databricks-treinner/
 > Execute um ETL completo usando apenas SQL Warehouse serverless 2X-Small.
 
 <p>
-  <a href="https://codespaces.new/OWNER/REPO?quickstart=1">
+  <a href="https://codespaces.new/RDMotta/skill-databricks?quickstart=1">
     <img src="https://github.com/codespaces/badge.svg" alt="Abrir Codespace"/>
   </a>
   &nbsp;
-  <a href="https://github.com/OWNER/REPO/actions/workflows/start-track1.yml">
+  <a href="https://github.com/RDMotta/skill-databricks/actions/workflows/start-track1.yml">
     <img src="https://img.shields.io/badge/Iniciar_Trilha-SQL_Serverless_Free-fb8500?style=for-the-badge" alt="Iniciar Trilha 4"/>
   </a>
 </p>
