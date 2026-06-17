@@ -1,8 +1,8 @@
-# Treinamento: Databricks + GitHub Copilot no Dia a Dia
+# Training: Databricks + GitHub Copilot in everyday life
 
-## Visão Geral
+## Overview
 
-Este treinamento apresenta a integração entre **Databricks** e **GitHub Copilot**, com foco prático em como essas ferramentas podem acelerar o desenvolvimento de pipelines de dados, otimizar código e aumentar a produtividade dos times de engenharia de dados.
+This training introduces the integration between Databricks and GitHub Copilot, with a practical focus on how these tools can accelerate the development of data pipelines, optimize code, and increase the productivity of data engineering teams.
 
 ---
 
@@ -10,43 +10,43 @@ Este treinamento apresenta a integração entre **Databricks** e **GitHub Copilo
 
 
 ### SQL Warehouse Serverless (40 min)
-- Setup do SQL Warehouse serverless 2X-Small
-- Integração VS Code + Databricks SQL
-- Exercício ETL em SQL: extração, limpeza e camada Gold
+- Setup the SQL Warehouse serverless 2X-Small
+- Integration VS Code + Databricks SQL
+- ETL Exercise in SQL: Extraction, Cleansing, and the Gold Layer
 
 ---
 
-## Estrutura do Repositório
+## Repository Structure
 
 ```
 databricks-treinner/
-├── README.md                          # Este arquivo
+├── README.md                          # This file
 ├── docs/
-│   ├── 01_setup_guide.md              # Guia de setup do ambiente
-│   ├── 02_databricks_concepts.md      # Conceitos chave do Databricks
-│   └── 03_copilot_tips.md             # Dicas de uso do Copilot
+│   ├── 01_setup_guide.md              # Environment setup guide
+│   ├── 02_databricks_concepts.md      # Key Databricks concepts
+│   └── 03_copilot_tips.md             # Copilot usage tips
 ├── notebooks/
 │   └── 01_sql_warehouse_serverless/
-│       ├── 01_sql_setup_and_extract.sql # Bronze SQL em warehouse serverless
-│       ├── 02_sql_cleaning_etl.sql      # Limpeza e ETL Silver em SQL
-│       └── 03_sql_gold_validation.sql   # Gold SQL e validações
+│       ├── 01_sql_setup_and_extract.sql # Bronze SQL in a serverless warehouse
+│       ├── 02_sql_cleaning_etl.sql      # Silver cleaning and ETL in SQL
+│       └── 03_sql_gold_validation.sql   # Gold SQL and validations
 ├── data/
-│   ├── raw/                           # Dados brutos de exemplo
-│   └── processed/                     # Dados processados
+│   ├── raw/                           # Example raw data
+│   └── processed/                     # Processed data
 └── scripts/
-    └── generate_sample_data.py        # Script para gerar dados de exemplo
+    └── generate_sample_data.py        # Script to generate sample data
 ```
 
 ---
 
-## ▶️ Escolha sua Trilha e Comece Agora
+## ▶️ Choose Your Path and Get Started Now
 
-> **Como funciona:** clique em **"Abrir Codespace"** para preparar o ambiente, depois clique em **"Iniciar Trilha"** para criar a Issue com os steps guiados. Cada commit nos notebooks avança automaticamente a Issue para a próxima etapa.
+> How it works: click on "Open Codespace" to prepare the environment, then click on "Start Path" to create the Issue with the guided steps. Each commit in the notebooks automatically advances the Issue to the next step.
 
 --- 
 
 ### 🧪 SQL Warehouse Serverless (Conta Free)
-> Execute um ETL completo usando apenas SQL Warehouse serverless 2X-Small.
+> Perform a full ETL using only SQL Warehouse serverless 2X-Small.
 
 <p>
   <a href="https://codespaces.new/RDMotta/skill-databricks?quickstart=1">
@@ -60,59 +60,58 @@ databricks-treinner/
 
 ---  
 
-O Codespace já vem pré-configurado com:
-- ☕ Java 11 + PySpark 3.5.1 + Delta Lake (via pip, sem download de binário)
+Codespace comes pre-configured with:
+
+- ☕ Java 11 + PySpark 3.5.1 + Delta Lake (via pip, no binary download)
 - 🐍 Python 3.12
 - 🔧 Databricks CLI
 - 🔌 Databricks Connect
 - ⚡ GitHub Copilot + Copilot Chat
-- 🗄️ Extensão Databricks para VS Code
+- 🗄️ Databricks Extension for VS Code
 - 📊 Jupyter Notebook support
-
-### Configurar Credenciais no Codespaces
-
-Antes de abrir o Codespace, configure os secrets em:
-**github.com → Settings → Codespaces → New secret**
+  
+#Set up Credentials in Codespaces
+Before you open the Codespace, configure the secrets in: github.com → Settings → Codespaces → New secret
 
 | Secret | Valor |
 |--------|-------|
 | `DATABRICKS_HOST` | `https://community.cloud.databricks.com` |
-| `DATABRICKS_TOKEN` | Token gerado em Settings → Developer → Access Tokens |
-| `DATABRICKS_CLUSTER_ID` | ID do cluster criado no Databricks |
+| `DATABRICKS_TOKEN` | Token generation in Settings → Developer → Access Tokens |
+| `DATABRICKS_CLUSTER_ID` | ID of the cluster created in Databricks |
 
 ---
 
-## Pré-requisitos (Instalação Local)
+## Prerequisites (Local Installation)
 
-Se preferir rodar localmente em vez do Codespaces:
+If you prefer to run locally instead of Codespaces:
 
-- Conta gratuita no [Databricks Free Edition](https://login.databricks.com/?dbx_source=docs&intent=CE_SIGN_UP)
-- VS Code instalado
-- Extensão [Databricks para VS Code](https://marketplace.visualstudio.com/items?itemName=databricks.databricks)
-- GitHub Copilot (licença ativa ou trial)
-- Python 3.12+ e Java 11+
+- [Databricks Free Edition](https://login.databricks.com/?dbx_source=docs&intent=CE_SIGN_UP)
+- VS Code install
+- Extension [Databricks for VS Code](https://marketplace.visualstudio.com/items?itemName=databricks.databricks)
+- GitHub Copilot (active license or trial)
+- Python 3.12+ or Java 11+
 
 ---
 
-## Como Usar Este Repositório
+## How to use this repository
 
 ### Via Codespaces (Recomendado)
-1. Abra o repositório no GitHub Codespaces (botão acima)
-2. Configure os secrets `DATABRICKS_HOST`, `DATABRICKS_TOKEN` e `DATABRICKS_CLUSTER_ID`
-3. O ambiente será configurado automaticamente
-4. Execute `make generate-data && make upload-data` para preparar os dados
-5. Siga o treinamento guiado pela Issue criada pelo workflow `01-training-start`
+1. Open the repository on GitHub Codespaces (button above)
+2. Configuration of secrets `DATABRICKS_HOST`, `DATABRICKS_TOKEN` e `DATABRICKS_CLUSTER_ID`
+3. The environment will be set up automaticall
+4. Execute `make generate-data && make upload-data` Run to prepare the data
+5. Follow the Issue-guided training created by the workflow `01-training-start`
 
-### Via Instalação Local
-1. Siga o [Guia de Setup](docs/01_setup_guide.md) para configurar seu ambiente
-2. Copie `.env.example` para `.env` e preencha com suas credenciais
+### Via Local Installation
+1. Follow the [Setup Guide](docs/01_setup_guide.md) to set up your environment
+2. Copy `.env.example` to `.env` and fill in your credentials 
 3. Execute `make setup && make generate-data`
-4. Importe os notebooks na ordem indicada pelos módulos
-5. Execute cada célula e pratique com o Copilot ativado
+4. Import the notebooks in the order indicated by the modules
+5. Run each cell and practice with Copilot enabled
 
 ---
 
-## Links Úteis
+## Links
 
 - [Databricks Free Edition](https://docs.databricks.com/aws/en/getting-started/free-edition)
 - [Documentação Databricks](https://docs.databricks.com/)
